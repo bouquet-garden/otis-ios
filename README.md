@@ -1,53 +1,51 @@
-# Otis 🦦
+# Otis iOS
 
-> *Otis helps you pack smarter, worry less, and collect the stamps to prove it.*
+AI-powered travel companion app for iOS built with SwiftUI.
 
-A beautiful, calm iOS packing app anchored by a pixel otter mascot named **Otis**. The core loop: build a packing list for your trip, get AI-powered suggestions, complete the list, earn a passport stamp. Repeat across trips. Otis grows as your travel history does.
+## Overview
 
-## What It Is
+Otis helps travelers organize their trips with intelligent packing lists, AI-powered suggestions, and beautiful passport stamp collections.
 
-- Trip packing list builder with AI-powered suggestions (OpenAI GPT-4o-mini)
-- Passport stamp collection — one stamp per completed trip
-- Otis the otter mascot — calm by default, expressive during celebrations
-- Free tier + Pro ($19.99/yr or $59.99 lifetime via RevenueCat)
-- iOS only, SwiftUI + MVVM + CloudKit sync
+## Features
 
-## Tech Stack
+- Smart packing list generation
+- AI-powered travel suggestions using Apple Intelligence
+- Trip organization and management
+- Passport stamp collection
+- Widget support for quick access
+- Supabase backend integration
 
-- SwiftUI (iOS 17+)
-- MVVM architecture
-- CloudKit (iCloud sync, Pro feature)
-- OpenAI API (GPT-4o-mini for packing suggestions)
-- RevenueCat (subscriptions)
-- SwiftData (local persistence)
+## Architecture
+
+- **SwiftUI** for modern declarative UI
+- **MVVM** architecture pattern
+- **Supabase** for backend services
+- **Apple Intelligence** for AI features
+- **WidgetKit** for home screen widgets
 
 ## Project Structure
 
 ```
-otis-ios/
-├── Models/          # Swift structs + SwiftData models
-├── Views/           # SwiftUI views by feature
-│   ├── TripCreation/
-│   ├── PackingList/
-│   ├── AISuggestions/
-│   ├── Passport/
-│   ├── Paywall/
-│   └── Widgets/
-├── ViewModels/      # Observable ViewModels per feature
-├── Services/        # OpenAI, RevenueCat, StampService, CloudKit
-└── Assets/          # Otis pixel art, stamp designs, app icon
+Otis/
+├── AppleIntelligenceService.swift  # AI integration layer
+├── SupabaseService.swift            # Backend service layer
+├── OnboardingView.swift             # User onboarding flow
+├── AISuggestionsViewModel.swift     # AI suggestions logic
+└── WidgetDataManager.swift          # Widget data management
 ```
 
-## Status
+## Setup
 
-🚧 Active development
+1. Open `Otis.xcodeproj` in Xcode
+2. Configure Supabase credentials
+3. Build and run on iOS simulator or device
 
-## Monetization
+## Requirements
 
-| Plan | Price |
-|------|-------|
-| Free | $0 forever — full list builder, last 3 trips |
-| Pro Annual | $19.99/year |
-| Lifetime | $59.99 one-time (launch offer) |
+- iOS 17.0+
+- Xcode 15.0+
+- Swift 5.9+
 
-**Rule: Never gate the beauty. Only gate the intelligence.**
+---
+
+Built with love by Bouquet Garden
